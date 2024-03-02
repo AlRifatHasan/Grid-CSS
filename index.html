@@ -3,29 +3,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>CSS Grid Layout</title>
-    <link rel="stylesheet" href="./base.css" />
-    <style>
-      .container {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        
-      }
+    <title>CSS Grid</title>
+    <link rel="stylesheet" href="base.css" />
+    <style> 
+    .container{
+      height: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-rows:50px auto 50px;
+
+    }
+    .header{
+      grid-column: 2 / -1;
+    }
+    .menu{
+      grid-row: 1 / 4;
+    }
+    .content{
+      grid-column: 2 / -1;
+    }
+    .footer{
+      grid-column: 2 / -1;
+    }
     </style>
   </head>
   <body>
+    <!-- CSS Grid -->
+    <h1 class="title">CSS GRID</h1>
     <div class="container">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
+      <div class="header">HEADER</div>
+      <div class="menu">MENU</div>
+      <div class="content">CONTENT</div>
+      <div class="footer">FOOTER</div>
     </div>
   </body>
 </html>
